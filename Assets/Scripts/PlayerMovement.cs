@@ -27,7 +27,23 @@ public class PlayerMovement : MonoBehaviour
         //get inputs
         moveDirection = Input.GetAxis("Horizontal"); //scale of -1 to 1
 
+        //animate
+        if (moveDirection > 0 && !facingRight)
+        {
+            FlipCharacter();
+        }
+        else if (moveDirection < 0 && facingRight)
+        {
+            FlipCharacter();
+        }
+
         //move
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+    }
+
+    private void FlipCharacter()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
