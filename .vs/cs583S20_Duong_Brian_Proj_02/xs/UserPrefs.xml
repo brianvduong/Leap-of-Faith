@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{432C6471-1F21-F7C6-8F2D-1B72D504D636}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainMenu.cs">
+    <Files>
+      <File FileName="Assets/Move2D.cs" Line="20" Column="60" />
+      <File FileName="Assets/Grounded.cs" />
+      <File FileName="Assets/MainMenu.cs" Line="16" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="cs583S20_Duong_Brian_Proj_02" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d06c764d-9c0d-4e8c-b727-64f0937626af" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
