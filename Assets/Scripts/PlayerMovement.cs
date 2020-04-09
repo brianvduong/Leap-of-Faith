@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    public float jumpForce;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection;
+    private bool isJumping = false;
 
     private void Awake()
     {
@@ -25,9 +27,32 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //get inputs
-        moveDirection = Input.GetAxis("Horizontal"); //scale of -1 to 1
+        ProcessInputs();
 
         //animate
+        Animate();
+    }
+
+    //handles physics better
+    private void FixedUpdate()
+    {
+        //move
+        Move();
+    }
+
+    private void Move()
+    {
+        rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+        if (isJumping)
+        {
+            rb.AddForce(new Vector2(0f, jumpForce));    
+        }
+        isJumping = false;
+
+    }
+
+    private void Animate()
+    {
         if (moveDirection > 0 && !facingRight)
         {
             FlipCharacter();
@@ -36,9 +61,16 @@ public class PlayerMovement : MonoBehaviour
         {
             FlipCharacter();
         }
+    }
 
-        //move
-        rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+    private void ProcessInputs()
+    {
+        moveDirection = Input.GetAxis("Horizontal"); //scale of -1 to 1
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            isJumping = true;
+        }
     }
 
     private void FlipCharacter()
