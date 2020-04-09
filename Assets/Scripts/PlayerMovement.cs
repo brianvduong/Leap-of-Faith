@@ -6,11 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
+    public Transform ceilingCheck;
+    public Transform groundCheck;
+    public LayerMask groundObjects;
+    public float checkRadius;
+    public int maxJumpCount;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection;
     private bool isJumping = false;
+    private bool isGrounded;
+    private int jumpCount;
 
     private void Awake()
     {
@@ -20,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        jumpCount = maxJumpCount;
     }
 
     // Update is called once per frame
@@ -36,6 +43,13 @@ public class PlayerMovement : MonoBehaviour
     //handles physics better
     private void FixedUpdate()
     {
+        //check if grounded
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
+        if (isGrounded)
+        {
+            jumpCount = maxJumpCount;
+        }
+
         //move
         Move();
     }
@@ -45,9 +59,11 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
         if (isJumping)
         {
-            rb.AddForce(new Vector2(0f, jumpForce));    
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            jumpCount--;
         }
         isJumping = false;
+
 
     }
 
@@ -67,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = Input.GetAxis("Horizontal"); //scale of -1 to 1
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && jumpCount > 0)
         {
             isJumping = true;
         }
