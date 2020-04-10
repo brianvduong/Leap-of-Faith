@@ -96,6 +96,18 @@
     <Compile Include="Assets\Fonts\Purple\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Fonts\Purple\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Fonts\Purple\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\OverTheShoulderAim\ActivateOnKeypress.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Trigger volumes\GenericTrigger.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovement2D.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\ActivateCameraWithDistance.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\ActivateCamOnPlay.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\ExampleHelpWindow.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\MixingCameraBlend.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
+    <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\PlayerMovePhysics.cs" />
     <Compile Include="Assets\Scripts\Grounded.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Move2D.cs" />
@@ -153,6 +165,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/brianduong/cs583S20_Duong_Brian_Proj_02/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>/Users/brianduong/cs583S20_Duong_Brian_Proj_02/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>/Users/brianduong/cs583S20_Duong_Brian_Proj_02/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.21f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
