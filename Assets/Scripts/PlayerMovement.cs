@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundObjects;
     public float checkRadius;
     public int maxJumpCount;
+    public Vector3 respawnPoint;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -52,6 +54,18 @@ public class PlayerMovement : MonoBehaviour
 
         //move
         Move();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    { 
+        if(other.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
+        if(other.tag == "Finish")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void Move()
