@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public int maxJumpCount;
     public Vector3 respawnPoint;
     public AudioSource jumpSound;
+    public AudioSource deathSound;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -61,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     { 
         if(other.tag == "FallDetector")
         {
+            deathSound.Play();
             transform.position = respawnPoint;
         }
         if(other.tag == "Finish")
