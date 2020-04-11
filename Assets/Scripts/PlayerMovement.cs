@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float checkRadius;
     public int maxJumpCount;
     public Vector3 respawnPoint;
+    public AudioSource jumpSound;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -73,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
         if (isJumping)
         {
+            jumpSound.Play();
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpCount--;
         }
