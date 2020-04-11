@@ -16,6 +16,12 @@ EditorBuildSettings:
     guid: 300d3f13f92c04c6b8156e89f02ae992
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
+    guid: f3016a4709a6c48b9ac49c3bbc02e956
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 2a273b888b37a4ac29ed5e89065b5822
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/57f798f999634452a879d863f2b7f52b
     guid: 57f798f999634452a879d863f2b7f52b
   - enabled: 0
     path: Assets/Scenes/Game Test.unity
