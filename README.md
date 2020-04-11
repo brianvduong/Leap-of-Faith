@@ -1,4 +1,5 @@
 I drew all of the sprites on http://pixelartmaker.com/. 
+
 Background artist: OpenGameArt.org
 Author: greggman
 
