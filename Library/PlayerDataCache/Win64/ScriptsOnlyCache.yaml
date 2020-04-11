@@ -1334,4 +1334,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 2.unity
   - Assets/Scenes/Level 3.unity
   - Assets/Scenes/Credits.unity
-  playerPath: /Users/brianduong/cs583S20_Duong_Brian_Proj_02/windows build/andrewbuild/cs583S20_Duong_Brian_Proj_02.exe
+  playerPath: /Users/brianduong/cs583S20_Duong_Brian_Proj_02/finalbuild/cs583S20_Duong_Brian_Proj_02.exe
